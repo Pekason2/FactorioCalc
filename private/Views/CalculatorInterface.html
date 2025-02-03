@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownTarget -->
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Factorio Calc</title>
+        <link rel="stylesheet" href="../public/css/stylesheet.css" type="text/css">
+
+        <script type="text/javascript" src="../public/Assets/Scripts/jQuery.js"></script>
+        <script type="text/javascript" src="../public/js/Main.js"></script>
+    </head>
+    <body>
+        <h1>Factorio Calculator</h1>
+
+        <label for="facility-names">Name des Gebäudes:</label>
+        <select id="facility-names" name="facility-names">
+
+        </select>
+
+        <br><br>
+
+        <label for="output-type">Output Angabe:</label>
+        <select id="output-type" name="output-type">
+            <option value="ips">Items per Second</option>
+            <option value="ipm">Items per Minute</option>
+            <option value="yb">Yellow Belts</option>
+            <option value="rb">Red Belts</option>
+            <option value="bb">Blue Belts</option>
+            <option value="gb">Green Belts</option>
+        </select>
+
+        <input id="production" name="production" type="number">
+
+        <br><br>
+
+        <button id="test" onclick="console.log($('#output-type').find(':selected').text())">_______</button>
+    </body>
+</html>
