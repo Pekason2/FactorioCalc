@@ -11,9 +11,21 @@ export class Calculator {
     //</editor-fold>
 
     constructor() {
+        this.styleFirstInput();
         this.fetchVariables();
-        this.addFacilityOption("<option value='facility'>Facilities</option>");
+        this.addFacilityOption("facilities", "Facilities");
+        this.addFacilityOption("crafter-t1", "Base Crafter");
+        this.addFacilityOption("crafter-t2", "Blue Crafter");
+        this.addFacilityOption("crafter-t3", "Green Crafter");
+    }
 
+    styleFirstInput()
+    {
+        $("div").each(function()
+        {
+            // Wähle das erste <select> oder <input>-Element (je nachdem, welches zuerst kommt)
+            $(this).find("select, input").first().addClass("first");
+        });
     }
 
     fetchVariables()
@@ -27,8 +39,8 @@ export class Calculator {
         });
     }
 
-    addFacilityOption(option)
+    addFacilityOption(option, name)
     {
-        $("#facility-names").append(option);
+        $("#facility-names").append(`<option value='${option}'>${name}</option>`);
     }
 }

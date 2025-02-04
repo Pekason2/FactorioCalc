@@ -12,27 +12,42 @@
     <body>
         <h1>Factorio Calculator</h1>
 
-        <label for="facility-names">Name des Gebäudes:</label>
-        <select id="facility-names" name="facility-names">
+        <div>
+            <label for="facility-names">Name des Gebäudes:</label>
+            <select id="facility-names" name="facility-names">
 
-        </select>
-
-        <br><br>
-
-        <label for="output-type">Output Angabe:</label>
-        <select id="output-type" name="output-type">
-            <option value="ips">Items per Second</option>
-            <option value="ipm">Items per Minute</option>
-            <option value="yb">Yellow Belts</option>
-            <option value="rb">Red Belts</option>
-            <option value="bb">Blue Belts</option>
-            <option value="gb">Green Belts</option>
-        </select>
-
-        <input id="production" name="production" type="number">
+            </select>
+        </div>
 
         <br><br>
 
-        <button id="test" onclick="console.log($('#output-type').find(':selected').text())">_______</button>
+        <div>
+            <label for="output-type">Output Angabe:</label>
+            <select id="output-type" name="output-type">
+                <option value="ips">Items per Second</option>
+                <option value="ipm">Items per Minute</option>
+                <option value="yb">Yellow Belts</option>
+                <option value="rb">Red Belts</option>
+                <option value="bb">Blue Belts</option>
+                <option value="gb">Green Belts</option>
+            </select>
+
+            <label for="production"></label>
+            <input id="production" name="production" type="number" value="0">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="facility-amount">Gebäude verwendet:</label>
+            <input id="facility-amount" type="number" value="0">
+        </div>
+
+        <br><br>
+
+        <div>
+            <button id="calculate">Calculate</button>
+        </div>
+
     </body>
 </html>
